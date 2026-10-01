@@ -1,8 +1,10 @@
 /*
   Cabeçalho da Escola Digital Livre:
+
   logo, menu (nav), busca e botão (actions).
 
   Estrutura:
+
   - .header-container: organiza o cabeçalho;
   - .logo, .logo-text, .logo-title, .logo-subtitle: identidade do site;
   - .main-nav, .nav-link, .nav-link.active: menu de navegação;
@@ -10,140 +12,186 @@
 */
 
 
-  /* VARIÁVEIS */
+/* VARIÁVEIS */
 
-  :root {
-      --color-primary: #2563eb;
-      --color-primary-dark: #1d4ed8;
-      --color-text: #1e293b;
-      --color-text-light: #64748b;
-      --color-border: #e2e8f0;
-      --color-bg: #ffffff;
-      --font-main: 'Inter', sans-serif;
-  }
-
-
-  /* RESET */
-
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-
-  body {
-      font-family: var(--font-main);
-  }
+:root {
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-text: #1e293b;
+    --color-text-light: #64748b;
+    --color-border: #e2e8f0;
+    --color-bg: #ffffff;
+    --font-main: 'Inter', sans-serif;
+}
 
 
-  /* CABEÇALHO */
+/* RESET */
 
-  .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 24px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-  }
-
-
-  /* LOGO */
-
-  .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-  }
-
-  .logo_img {
-      max-width: 200px;
-
-  }
-
-  .logo-text {
-      display: flex;
-      flex-direction: column;
-  }
-
-  .logo-title {
-      color: var(--color-primary);
-      font-size: 20px;
-      font-weight: 700;
-  }
-
-  .logo-subtitle {
-      color: var(--color-text-light);
-      font-size: 12px;
-  }
+body {
+    font-family: var(--font-main);
+}
 
 
-  /* MENU DE NAVEGAÇÃO */
+/* CABEÇALHO */
 
-  .main-nav {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-  }
+.header {
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
 
-  .nav-link {
-      text-decoration: none;
-      color: var(--color-text-light);
-      transition: color 0.2s ease;
-  }
-
-  .nav-link:hover {
-      color: var(--color-text);
-  }
-
-  .nav-link.active {
-      color: var(--color-primary);
-      font-weight: 600;
-  }
-
-  /* BUSCA */
-
-  .search-box {
-      position: relative;
-      display: flex;
-      align-items: center;
-  }
-
-  .search-box input {
-      padding: 10px 40px 10px 16px;
-      border: 1px solid var(--color-border);
-      border-radius: 8px;
-      outline: none;
-      font-family: var(--font-main);
-  }
-
-  .search-box input:focus {
-      border-color: var(--color-primary);
-  }
-
-  .search-icon {
-      position: absolute;
-      right: 14px;
-      pointer-events: none;
-  }
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
 
 
-  /* BOTÃO PRINCIPAL */
+/* LOGO */
 
-  .btn-primary {
-      background-color: var(--color-primary);
-      color: var(--color-bg);
-      border: none;
-      border-radius: 8px;
-      padding: 10px 18px;
-      text-decoration: none;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-  }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
 
-  .btn-primary:hover {
-      background-color: var(--color-primary-dark);
-  }
+.logo_img {
+    max-width: 200px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo-subtitle {
+    color: var(--color-text-light);
+    font-size: 12px;
+}
+
+
+/* MENU DE NAVEGAÇÃO */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-text-light);
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-text);
+}
+
+.nav-link.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+
+/* AÇÕES DO HEADER */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* BUSCA */
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 10px 40px 10px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    outline: none;
+    font-family: var(--font-main);
+}
+
+.search-box input:focus {
+    border-color: var(--color-primary);
+}
+
+.search-icon {
+    position: absolute;
+    right: 14px;
+    pointer-events: none;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+
+/* BOTÃO HAMBÚRGUER */
+
+.hamburguer {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .hamburguer {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav.ativo {
+        display: flex;
+    }
+}
